@@ -34,7 +34,7 @@ var articals={
         hii i am priyanka
         </p> `
     }
-}
+};
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
