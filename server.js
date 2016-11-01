@@ -15,7 +15,75 @@ var articals={
         <p>
         hii i am priyanka
         </p> `
-    }
+    },
+    'article_two': {
+        title:'article_two|priyanka verma',
+        heading :'article_two',
+        date:'1 nov 2016',
+        content:`
+        <p>
+        hii i am priyanka
+        </p> `
+    },
+    'article_three': {
+        title:'article_three|priyanka verma',
+        heading :'article_three',
+        date:'1 nov 2016',
+        content:`
+        <p>
+        hii i am priyanka
+        </p> `
+    },
+}
+function createTemplate(data){
+    var title=data.title;
+    var date=data.date;
+    var heading=data.heading;
+    var content=data.content;
+var htmltemplate=`
+<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width=device-width,initial_scale=1"/>
+        <style>
+            .container{
+               max-width: 800px;
+    margin: 0 auto;
+    color: #8c8585;
+    font-family: sans-sarif;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <a href="/">home</a>
+            
+            </div>
+            <hr/>
+            <h3>
+                ${heading}
+            </h3>
+            <div>
+                ${date}
+            </div>
+            <div>
+               ${content}
+            </div>
+            </div>
+    </body>
+
+
+</html>
+
+`;
+return htmltemplate;
 }
 
 app.get('/', function (req, res) {
@@ -28,7 +96,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/article_one',function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'article_one.html'));
+  res.send(createTemplate(articleone));
 });
 
 app.get('/article_two',function(req,res){
