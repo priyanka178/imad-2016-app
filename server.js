@@ -33,7 +33,7 @@ var articals={
         <p>
         hii i am priyanka
         </p> `
-    },
+    }
 }
 function createTemplate(data){
     var title=data.title;
