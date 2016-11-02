@@ -14,35 +14,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articals={
-    'article_one': {
-        title:'article_one|priyanka verma',
-        heading :'article_one',
-        date:'1 nov 2016',
-        content:`
-        <p>
-        hii i am priyanka
-        </p> `
-    },
-    'article_two': {
-        title:'article_two|priyanka verma',
-        heading :'article_two',
-        date:'1 nov 2016',
-        content:`
-        <p>
-        hii i am priyanka
-        </p> `
-    },
-    'article_three': {
-        title:'article_three|priyanka verma',
-        heading :'article_three',
-        date:'1 nov 2016',
-        content:`
-        <p>
-        hii i am priyanka
-        </p> `
-    }
-};
+
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
